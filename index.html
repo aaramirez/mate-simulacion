@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KX76XF8R');</script>
+<!-- End Google Tag Manager -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Simulación</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Monte Carlo y simulación estocástica: números pseudoaleatorios, generación de variables, vectores y procesos, simulación de eventos discretos, análisis de resultados, reducción de varianza y métodos de Monte Carlo por cadenas de Markov.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400;1,8..60,600&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KX76XF8R"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="wrap" data-page="index">
+<header class="topbar"><a class="brand" href="index.html"><b>Simulación</b></a><span class="eyebrow">Curso visual e interactivo · Matemática</span><a class="al-sitio" href="https://aaramirez.github.io/">← Todos los cursos</a></header>
+<div class="layout">
+<nav class="toc" id="toc" aria-label="Ruta de aprendizaje"></nav>
+<main>
+
+<p class="aviso-curado" role="note">El material de Matemática está en proceso de curado: puede tener errores.</p>
+<header class="hero">
+  <span class="eyebrow">Curso visual e interactivo · Matemática</span>
+  <h1>Cuando la fórmula no existe, se juega el experimento un millón de veces</h1>
+  <p class="lede">La espera media en una cola con dos cajeros y clientes impacientes, la probabilidad de ruina de una cartera o la distribución a posteriori de un modelo con veinte parámetros no tienen fórmula cerrada. Se pueden estimar haciendo que la computadora juegue el experimento muchas veces. Este curso enseña a hacerlo bien: generar el azar, simular el sistema, medir el error del resultado y reducirlo, con cada método demostrado y corriendo en la página.</p>
+</header>
+
+<section>
+  <h2>Cómo usar este curso</h2>
+  <div class="prose">
+    <p><b>Estado.</b> El curso está en preparación. La <a href="temario.html">tabla de contenido</a> ya tiene los 11 capítulos con sus secciones y sus laboratorios, y está en revisión.</p>
+    <p><b>Para quién es.</b> Para estudiantes de estadística, ciencias actuariales, matemática e ingeniería, y del posgrado en modelos aleatorios. Conviene leer antes Probabilidad, por las distribuciones, las transformaciones y la esperanza condicional, y Procesos estocásticos, por el proceso de Poisson, las cadenas de Markov, su distribución estacionaria y el movimiento browniano. Se programa en Python o en R desde el primer capítulo.</p>
+    <p><b>Cómo está hecho.</b> Un centro de atención con cajeros recorre el curso: primero se generan sus llegadas y sus tiempos de servicio, después se simula la cola evento por evento, se mide el error de la espera estimada y se reduce con mejores estimadores. La última parte cambia de problema y muestrea distribuciones a posteriori con cadenas de Markov. Los laboratorios corren las simulaciones en la página y dejan mover semillas, tamaños, propuestas y tasas; las prácticas usan Python con NumPy y SciPy, o R. Este curso habilita Estadística bayesiana.</p>
+  </div>
+</section>
+
+<details class="stage" id="temario" open><summary><h2><span class="pn">Empieza aquí</span> Tabla de contenido</h2></summary>
+  <div class="mods">
+    <a class="mod" href="temario.html"><span class="n">≡</span><b>Tabla de contenido</b><p>Cada capítulo con sus secciones y sus laboratorios.</p></a>
+  </div>
+</details>
+
+<details class="stage" id="parte-1" open><summary><h2><span class="pn">Parte 1</span> El azar en la computadora</h2><span class="cuenta" data-etapa-cuenta="1"></span></summary>
+  <div class="mods">
+    <div class="mod soon" data-id="por-que-simular"><span class="n">01</span><b>Simulación: generalidades y el método de Monte Carlo</b><p>Qué es un modelo de simulación, la idea de Monte Carlo y por qué su error baja como uno sobre la raíz de n.</p></div>
+    <div class="mod soon" data-id="numeros-pseudoaleatorios"><span class="n">02</span><b>Variables pseudoaleatorias y sus pruebas</b><p>Generadores congruenciales y modernos, su periodo y estructura, las semillas, y las pruebas que deben pasar.</p></div>
+  </div>
+</details>
+
+<details class="stage" id="parte-2" open><summary><h2><span class="pn">Parte 2</span> Generar lo que se necesita</h2><span class="cuenta" data-etapa-cuenta="2"></span></summary>
+  <div class="mods">
+    <div class="mod soon" data-id="transformada-inversa"><span class="n">03</span><b>El método de la transformada inversa</b><p>Generar cualquier variable a partir de una uniforme invirtiendo su función de distribución, en el caso discreto y en el continuo.</p></div>
+    <div class="mod soon" data-id="aceptacion-y-rechazo"><span class="n">04</span><b>Aceptación y rechazo, y la generación de la normal</b><p>Generar con una distribución fácil que envuelve a la difícil, y los métodos clásicos para la normal, la gamma y la beta.</p></div>
+    <div class="mod soon" data-id="vectores-y-dependencia"><span class="n">05</span><b>Vectores aleatorios, cópulas y estadísticos de orden</b><p>Generar vectores gaussianos, dependencia con cópulas, estadísticos de orden y series temporales simples.</p></div>
+    <div class="mod soon" data-id="simular-procesos"><span class="n">06</span><b>Simulación de procesos estocásticos</b><p>Poisson homogéneo y no homogéneo, movimiento browniano y fraccionario, ecuaciones diferenciales estocásticas por Euler y procesos de Lévy.</p></div>
+  </div>
+</details>
+
+<details class="stage" id="parte-3" open><summary><h2><span class="pn">Parte 3</span> Simular sistemas y medir el error</h2><span class="cuenta" data-etapa-cuenta="3"></span></summary>
+  <div class="mods">
+    <div class="mod soon" data-id="eventos-discretos"><span class="n">07</span><b>Simulación por el método de eventos discretos</b><p>El reloj, la lista de eventos y las variables de estado, aplicados a colas con uno y dos servidores.</p></div>
+    <div class="mod soon" data-id="analisis-de-resultados"><span class="n">08</span><b>Técnicas de análisis de resultados</b><p>Media, varianza e intervalos de confianza de lo que sale de una simulación, cuántas corridas hacen falta, el bootstrap y la validación del modelo.</p></div>
+    <div class="mod soon" data-id="reduccion-de-varianza"><span class="n">09</span><b>Métodos de reducción de varianza</b><p>Variables antitéticas, de control, condicionamiento, estratificación y muestreo por importancia: el mismo error con menos simulaciones.</p></div>
+  </div>
+</details>
+
+<details class="stage" id="parte-4" open><summary><h2><span class="pn">Parte 4</span> Monte Carlo por cadenas de Markov</h2><span class="cuenta" data-etapa-cuenta="4"></span></summary>
+  <div class="mods">
+    <div class="mod soon" data-id="metropolis-hastings"><span class="n">10</span><b>MCMC: el algoritmo de Metropolis-Hastings</b><p>Construir una cadena con la distribución deseada como estacionaria, elegir la propuesta y diagnosticar la convergencia.</p></div>
+    <div class="mod soon" data-id="gibbs-y-mas"><span class="n">11</span><b>El muestreador de Gibbs, el recocido simulado y otros métodos</b><p>Muestrear coordenada por coordenada, optimizar con temperatura y los algoritmos de remuestreo y de EM estocástico.</p></div>
+  </div>
+</details>
+
+
+
+<nav class="pager" id="pager" aria-label="Capítulo anterior y siguiente"></nav>
+</main>
+</div>
+<footer><span>Curso abierto de aaramirez.github.io.</span><span>Sitio publicado: <a href="https://github.com/aaramirez/mate-simulacion" target="_blank" rel="noopener">github.com/aaramirez/mate-simulacion</a></span></footer>
+</div>
+<script src="assets/lab.js"></script>
+</body>
+</html>
